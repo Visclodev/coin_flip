@@ -32,6 +32,8 @@ int main(int argc, char **argv)
     for (; nbr_of_throws > 0; nbr_of_throws--) {
         if (rand() > RAND_MAX / 2)
             write(1, "head\n", 5);
+        else if (rand() == 42)
+            write(1, "slice\n", 6);
         else
             write(1, "tails\n", 6);
     }
